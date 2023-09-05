@@ -1,0 +1,60 @@
+#school adminstration project
+student_info = input("Enter any student information: ")
+print(student_info,type(student_info))
+condition=True
+while(condition):
+    student_info = input("Enter any student information: ")
+    print(student_info)
+    
+    condition_check = input("Enter (yes/no) if you want to print information for another student: ")
+    if condition_check=="yes":
+        condition=True
+    elif condition_check=="no":
+        condition=False
+condition=True
+
+while(condition):
+    student_info = input("Enter student information in the following format(Name Age Contact_no Email_id: )")
+    print("Entered information: "+ student_info)
+    
+    condition_check= input("Enter (yes/no) if you want to print information for another student: ")
+    if condition_check=="yes":
+        condition=True
+    elif condition_check=="no":
+        condition=False
+
+import csv
+
+def write_into_csv(info_list):
+    with open("student_info.csv","a",newline="") as csv_file:
+        writer = csv.writer(csv_file)
+        
+condition=True
+while(condition):
+    student_info = input("Enter student information in the following format(Name Age Contact_no Email_id: )")
+    print("Entered information: "+ student_info)
+    
+    student_info_list=student_info.split(' ')
+    print("Entered split up info is "+ str(student_info_list))
+    
+    write_into_csv(student_info_list)
+    
+    condition_check= input("Enter (yes/no) if you want to print information for another student: ")
+    if condition_check=="yes":
+        condition=True
+    elif condition_check=="no":
+        condition=False
+
+while(condition):
+    student_info = input("Enter student information in the following format(Name Age Contact_no Email_id: )")
+    print("Entered information: "+ student_info)
+    
+    student_info_list=student_info.split(' ')
+    print("Entered split up info is "+ str(student_info_list))
+          
+    condition_check= input("Enter (yes/no) if you want to print information for another student: ")
+    if condition_check=="yes":
+          condition=True
+    elif condition_check=="no":
+          condition=False
+    
